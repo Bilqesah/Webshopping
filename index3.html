@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Webshop</title>
+    
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      </head>
+<body>
+    
+      <!--nav2-->
+      <nav class="navbar navbar-expand-lg  text-bg-success ">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand text-white" href="#">HomeCenter</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+              <li class="nav-item">
+                <a class="nav-link active text-white ms-2" aria-current="page" href="#">Home</a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link active text-white ms-3" aria-current="page" href="new">New</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white ms-3" aria-current="page" href="#disacount">Discounts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white ms-3" aria-current="page" href="#contact">Contact</a>
+              </li>
+    
+             
+            </ul>
+            <a href="Sigup.html" class="log">LogIn</a>
+          </div>
+        </div>
+      </nav>
+      <!--nav1-->
+      <nav class="navbar bg-success">
+        <div class="container">
+          
+          <form class="d-flex serch" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+          <div class="icons">
+            
+            <div><a href="mycart3.html"><i class="fa-solid fa-cart-shopping"></i></a> Shopping Cart ( <span id="itemscart"></span> )</div>
+            <div><i class="fa-solid fa-heart ms-5"></i> Favorite ( <span id="fav"></span> )</div>
+            
+
+            
+            
+            
+          </div>
+        </div>
+      </nav>
+      <!--background-->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imges/0c324587fc308e32e01ef9dc51895847.jpg" class="d-block w-100 " alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="imges/c3dfffeaf9ebf826735378df076c97cc.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="imges/tm2.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--Products-->
+      <div class="row mt-2">
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card ">
+            <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+            <img src="imges/ch2.jpg" class="card-img-top siz" alt="" />
+            <div class="card-body">
+              <span id="fav"></span>
+              
+              <h5 class="card-title" id="el1">Chair</h5>
+              <p class="text-black-50" id="p1">100$</p>
+              <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el1`,`p1`)">Add To Cart</button>
+              
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card">
+            <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+            <img src="imges/tm1.jpg" class="card-img-top siz" alt="" />
+            <div class="card-body">
+              <h5 class="card-title" id="el2" >TapleLamp</h5>
+              <p class="text-black-50" id="p2">50$</p>
+              <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el2`,`p2`)">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card">
+            <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+            <img src="imges/ta1.jpg" class="card-img-top siz" alt="" />
+            <div class="card-body">
+              <h5 class="card-title" id="el3">Table</h5>
+              <p class="text-black-50"id="p3">80$</p>
+              <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el3`,`p3`)">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+              <img src="imges/ch4.jpg" class="card-img-top siz" alt="" />
+              <div class="card-body">
+                <h5 class="card-title" id="el4">Chair</h5>
+                <p class="text-black-50"id="p4">350$</p>
+                <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el4`,`p4`)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    
+      <div class="row mt-4">
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card">
+            <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+            <img src="imges/ta2.jpg" class="card-img-top siz" alt="" />
+            <div class="card-body">
+              <h5 class="card-title" id="el5">Table</h5>
+              <p class="text-black-50"id="p5">150$</p>
+              <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el5`,`p5`)">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card">
+            <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+            <img src="imges/ch1.jpg" class="card-img-top siz" alt="" />
+            <div class="card-body">
+                <h5 class="card-title"id="el6">Chair</h5>
+              <p class="text-black-50"id="p6">300$</p>
+              <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el6`,`p6`)">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card">
+            <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+            <img src="imges/tm.jpg" class="card-img-top siz " alt="" />
+            <div class="card-body">
+                <h5 class="card-title"id="el7">TapleLamp</h5>
+              <p class="text-black-50"id="p7">300$</p>
+              <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el7`,`p7`)">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+              <img src="imges/ch3.jpg" class="card-img-top siz" alt="" />
+              <div class="card-body">
+                <h5 class="card-title"id="el8">Chair</h5>
+                <p class="text-black-50"id="p8">300$</p>
+                <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el8`,`p8`)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+      <div class="row mt-4">
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card">
+            <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+            <img src="imges/tm6.jpg" class="card-img-top siz" alt="" />
+            <div class="card-body">
+                <h5 class="card-title"id="el9">TapleLamp</h5>
+              <p class="text-black-50"id="p9">150$</p>
+              <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el9`,`p9`)">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card">
+            <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+            <img src="imges/tb3.jpg" class="card-img-top siz" alt="" />
+            <div class="card-body">
+                <h5 class="card-title"id="el10">Table</h5>
+              <p class="text-black-50"id="p10">300$</p>
+              <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el10`,`p10`)">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card">
+            <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+            <img src="imges/ch5.jpg" class="card-img-top siz " alt="" />
+            <div class="card-body">
+                <h5 class="card-title"id="el11">Chair</h5>
+              <p class="text-black-50"id="p11">300$</p>
+              <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el11`,`p11`)">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+              <img src="imges/tm3.jpg" class="card-img-top siz" alt="" />
+              <div class="card-body ">
+                <h5 class="card-title"id="el12">TableLamp</h5>
+                <p class="text-black-50"id="p12">300$</p>
+                <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el12`,`p12`)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <h1>New</h1>
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card mb-4">
+              
+              <img src="imges/tm3.jpg" class="card-img-top siz" alt="" />
+              
+              
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+              <img src="imges/tbl3.jpg" class="card-img-top siz" alt="" />
+              <div class="card-body ">
+                <h5 class="card-title"id="el12">Table</h5>
+                <p class="text-black-50"id="p12">150$</p>
+                <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el12`,`p12`)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+              <img src="imges/acc3.jpg" class="card-img-top siz" alt="" />
+              <div class="card-body ">
+                <h5 class="card-title"id="el12">Accessories</h5>
+                <p class="text-black-50"id="p12">30$</p>
+                <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el12`,`p12`)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+              <img src="imges/chr2.jpg" class="card-img-top siz" alt="" />
+              <div class="card-body ">
+                <h5 class="card-title"id="el12">Chair</h5>
+                <p class="text-black-50"id="p12">120$</p>
+                <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el12`,`p12`)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+              <img src="imges/tbl5.jpg" class="card-img-top siz" alt="" />
+              <div class="card-body ">
+                <h5 class="card-title"id="el12">Table</h5>
+                <p class="text-black-50"id="p12">80$</p>
+                <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el12`,`p12`)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <h2 id="disacount">Disacount</h2>
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card mb-4">
+              <img src="imges/tm3.jpg" class="card-img-top siz" alt="" />
+              
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+              <img src="imges/chr3.jpg" class="card-img-top siz" alt="" />
+              <div class="card-body ">
+                <h5 class="card-title"id="el12">TableLamp</h5>
+                <p class="text-black-50"id="p12"><del>150$</del> 100$</p>
+                <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el12`,`p12`)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+              <img src="imges/tbl4.jpg" class="card-img-top siz" alt="" />
+              <div class="card-body ">
+                <h5 class="card-title"id="el12">Table</h5>
+                <p class="text-black-50"id="p12"><del>150$</del> 80$</p>
+                <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el12`,`p12`)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+              <img src="imges/acc1.jpg" class="card-img-top siz" alt="" />
+              <div class="card-body ">
+                <h5 class="card-title"id="el12">Accessories</h5>
+                <p class="text-black-50"id="p12"><del>50$</del> 30$</p>
+                <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el12`,`p12`)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card">
+              <span class="m-2"><i class="fa-solid fa-heart" onclick="addfav()"></i></span>
+              <img src="imges/chr4.jpg" class="card-img-top siz" alt="" />
+              <div class="card-body ">
+                <h5 class="card-title"id="el12">Chair</h5>
+                <p class="text-black-50"id="p12"><del>200$</del> 150$</p>
+                <button type="button" class="btn btn-outline-success"  onclick="Addtocart(`el12`,`p12`)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    
+    
+    <!--footer-->
+      <nav class="navbar bg-success justify-content-center mt-4">
+        <div class="container-fluid justify-content-center">
+          <span class="navbar-brand mb-0  text-white">&copy;2022 <span>CenterHome</span> All Right Reserved</span>
+        </div>
+      </nav>
+</body>
+<script src="js/jquery.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+     $(`button`).dblclick(function(){
+    alert("Select It")
+  });
+   
+      var cartArray=[];
+    function Addtocart(el,p){
+      Itemcart();
+        console.log(el);
+     var name=$(`#`+el).html();
+     var price=$(`#`+p).html();
+      console.log(name);
+      console.log(price)
+      let product=new Object();
+      product.Name=name;
+      product.Price=price;
+      console.log(product);
+      cartArray.push(product);
+      console.log(cartArray);
+      localStorage.setItem("Sarray",JSON.stringify(cartArray));
+    }
+    
+    var f=0;
+    function addfav(){
+      f+=1;
+      console.log(f);
+      $(`#fav`).html(`${f}`);
+    }
+    var items=0;
+    function Itemcart(){
+      items+=1;
+      console.log(items);
+      $(`#itemscart`).html(`${items}`);
+    }
+    
+  </script>
+</html>
